@@ -30,7 +30,36 @@ for inventory, just create the boxes for each item<a -->
   </div>
   
   <div class="filters">
-    <div class="box c">Filters</div>
+    <div class="box filters">
+      <h3>
+        Filters
+      </h3>
+      <hr class="black-border">
+      <div class="wrapper filters" style="grid-template-columns: repeat(1, minmax(200px, 1fr))">
+        <div class="wrapper filter-type">
+          Type:
+        </div>
+        <div class="wrapper filter-size">
+          Size:
+        </div>
+        <div class="wrapper filter-price" style="grid-template-columns: repeat(1, minmax(200px, 1fr))"> 
+          Price Range:
+          <div class="price-input">
+            <div class="price-field" style="grid-template-columns: repeat(2, minmax(200px, 1fr))">
+              <input type="number" 
+                     class="min-input" 
+                     value="00.00"
+                     style="width: 15%;">
+              <span>-</span>
+              <input type="number" 
+                     class="max-input" 
+                     value="15.00"
+                     style="width: 15%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
     <div class="box 1">Input image + info</div>
@@ -40,4 +69,3 @@ for inventory, just create the boxes for each item<a -->
   </div>
   
 </div>
-
