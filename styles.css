@@ -209,6 +209,5 @@ form.search::after {
 }
 
 .show-item {
-  display: inline;
+  display: block;
 }
-
