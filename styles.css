@@ -16,9 +16,11 @@ body {
   border-radius: 3px;
   padding: 20px;
   font-size: 14px;
+  border: 2px solid black;
 }
 
 .header-box {
+  display: flex;
   background-color: #f8f8f4;
   color: #000;
   border-radius: 3px;
@@ -55,13 +57,14 @@ body {
   transform: translate(-50%, -30%);
   width: 20%;
   justify-content: center;
+  font-size: 4vw;
 }
 
 img { 
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  border-radius: 5px;
   /* HAVE TO ADD LOGO FOR HEADER LOGO BOX */
 }
 
@@ -71,17 +74,6 @@ img {
   background: #f8f8f4;
   color: #ff904d;
   font-size: 12px;
-}
-
-
-.wrapper input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  width: 60%;
-  font-family: Monaco;
-  font-size: 17px;
 }
 
 .search-container {
@@ -96,13 +88,117 @@ img {
   color: white;
   background-color: #ff904d;
   text-align: center;
-  border: none;
   font-size: 14px;
   padding: 10px;
   font-family: Monaco;
+}
+
+.button.active {
+  background-color: #d16f2a;
 }
 
 
 hr.black-border {
   border-top: 2px solid black;
 }
+
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 2px solid black;
+  border-radius: 10px 0 0 10px;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  padding: 6px;
+  font-family: Monaco;
+}
+
+
+form.search button[type=submit] {
+  width: 20%;
+  padding: 10px;
+  background: #fb944c;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  height: 50px;
+  border: 2px solid black;
+  border-left: none;
+}
+
+form.search button:hover {
+  background: #ff904d;
+}
+
+form.search button:active {
+  background: #d16f2a;
+}
+
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.filter-btn {
+  padding: 5px;
+  background: transparent;
+  color: black;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: Monaco;
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  padding: 5px;
+  background: #fb944c;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: Monaco;
+  border: 1px solid black;
+}
+
+.filter-btn.active .fa-times {
+    display: inline;
+}
+
+.filter-btn .fa-times {
+    display: none;
+}
+
+
+.type-filter {
+  display: flex; 
+  gap: 10px; 
+  margin-top: 5px;
+  width: 85%;
+  flex-wrap: wrap; 
+}
+
+.warning {
+  background-color: #e0bbb8; 
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  display: none;
+}
+
+
+.item-box {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 14px;
+  border: 2px solid black;
+  height: 200px;
+}
+
