@@ -60,8 +60,44 @@ function filterSelection(c) {
   }
 }
 
+
+
+
+//var selected = [];
+//filterSelection("all")
+//function filterSelection([min]) {
+//
+//  if (c == "all") {
+//    selected = [];
+//  } else {
+//    const index = selected.indexOf(c);
+//    if (index > -1) {
+//        selected.splice(index, 1);
+//    } else {
+//        selected.push(c);
+//    }
+//  }
+//
+//  var x = document.getElementsByClassName("item-box");
+//  if (selected.length == 0) {
+//    for (let i = 0; i < x.length; i++) {
+//      AddCat(x[i], "show-item");
+//    }
+//    return;
+//  }
+//
+//  for (let i = 0; i < x.length; i++) {
+//    RemoveCat(x[i], "show-item");
+//    if (selected.some(cat => x[i].className.indexOf(cat) > -1)) {
+//      AddCat(x[i], "show-item");
+//    }
+//  }
+//}
+
+
+
 // issues with priority of selection -> if you do clothes + m you'll get
-// both the clothes obj and the furniture/toy cuz that's m 
+// both the clothes obj and the furniture/toy cuz that's m
 // but this isn't super important
 
 function AddCat(element, name) {
@@ -86,3 +122,22 @@ function RemoveCat(element, name) {
   }
   element.className = arr1.join(" ");
 }
+
+
+function lookUp() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('searchbar');
+  filter = input.value.toUpperCase();
+  ul = document.getElementsByClassName("item-box");
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
