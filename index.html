@@ -10,6 +10,8 @@ for filtiers, just leave blank<a
 for inventory, just create the boxes for each item<a -->
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="wrapper top-nav">
   <div class="header-box">
     <div class="left-text">Inventory</div>
@@ -19,42 +21,87 @@ for inventory, just create the boxes for each item<a -->
 </div>
 
 <br>
-<button class="button logout">Logout</button>
+<form class="search" action="logout.php" style="display: flex;">
+  <button class="button logout">Logout</button>
+</form>
 <br>
 
 <div class="wrapper">
   <h1 style="grid-column-start: 1; grid-column-end: 4; text-align: center; padding-bottom: 0;">Admin Inventory</h1>
   
-  <div class="search-container" style="grid-column-start: 1; grid-column-end: 4;">
-    <input type="text" placeholder="Search.." name="search">
+  <div class="search-container" style="display: flex; align-items: center; grid-column-start: 1; grid-column-end: 4;">
+    <form class="search" action="action_page.php" style="display: flex; width: 80%;">
+      <input type="text" placeholder="Search.." name="search box">
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
   </div>
   
   <div class="filters">
-    <div class="box filters">
+    <div class="box filters" style="background: transparent; border: none;">
       <h3>
         Filters
       </h3>
       <hr class="black-border">
+      <br>
+      <br>
       <div class="wrapper filters" style="grid-template-columns: repeat(1, minmax(200px, 1fr))">
-        <div class="wrapper filter-type">
-          Type:
+        <div class="filter-type-div">
+          <div>Type:</div>
+          <br>
+          <div class="type-filter">
+            <button class="filter-btn clothes" onclick="activateButton(this)">Clothes
+            <i class="fa fa-times" style="margin-left: 5px;"></i></button>
+            <button class="filter-btn furniture" onclick="activateButton(this)">Furniture
+            <i class="fa fa-times" style="margin-left: 5px;"></i></button>
+            <button class="filter-btn other" onclick="activateButton(this)">Other
+            <i class="fa fa-times" style="margin-left: 5px;"></i></button>
+          </div>
         </div>
-        <div class="wrapper filter-size">
-          Size:
+        
+        <div class="filter-size-div">
+          <div>
+            Size:
+          </div>
+          <br>
+          <div class="size wrapper" style="grid-template-columns: repeat(2, minmax(50px, 1fr)); grid-gap: 10px; width: 85%">
+            <button class="filter-btn small" onclick="activateButton(this)">
+            S
+            </button>
+            <button class="filter-btn med" onclick="activateButton(this)">
+            M
+            </button>
+            <button class="filter-btn large" onclick="activateButton(this)">
+            L
+            </button>
+            <button class="filter-btn xlarge" onclick="activateButton(this)">
+            XL+
+            </button>
+          </div>
         </div>
+        
         <div class="wrapper filter-price" style="grid-template-columns: repeat(1, minmax(200px, 1fr))"> 
           Price Range:
           <div class="price-input">
             <div class="price-field" style="grid-template-columns: repeat(2, minmax(200px, 1fr))">
               <input type="number" 
-                     class="min-input" 
+                     id="min-input" 
                      value="00.00"
-                     style="width: 15%;">
+                     style="width: 30%;
+                     font-family: Monaco;"
+                     step="0.01">
               <span>-</span>
-              <input type="number" 
-                     class="max-input" 
-                     value="15.00"
-                     style="width: 15%;">
+              <input 
+                     type="number" 
+                     id="max-input" 
+                     value="00.00"
+                     style="width: 30%;
+                     font-family: Monaco;"
+                     step="00.01">
+             <p class="warning" id="min-warning">
+               Warning: the minimum must be lower than the maximum!
+             </p>
             </div>
           </div>
         </div>
@@ -62,10 +109,10 @@ for inventory, just create the boxes for each item<a -->
     </div>
   </div>
   <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
-    <div class="box 1">Input image + info</div>
-    <div class="box 2">Input image + info</div>
-    <div class="box 3">Input image + info</div>
-    <div class="box 3">Input image + info</div>
+    <div class="item-box 1">Input image + info</div>
+    <div class="item-box 2">Input image + info</div>
+    <div class="item-box 3">Input image + info</div>
+    <div class="item-box 4">Input image + info</div>
   </div>
   
 </div>
