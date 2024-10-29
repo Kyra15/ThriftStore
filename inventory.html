@@ -11,6 +11,9 @@ for inventory, just create the boxes for each item<a -->
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
 <div class="wrapper top-nav">
   <div class="header-box">
@@ -28,7 +31,7 @@ for inventory, just create the boxes for each item<a -->
 
 <div class="wrapper">
   <h1 style="grid-column-start: 1; grid-column-end: 4; text-align: center; padding-bottom: 0;">Admin Inventory</h1>
-  
+
   <div class="search-container" style="display: flex; align-items: center; grid-column-start: 1; grid-column-end: 4;">
     <form class="search" action="action_page.php" style="display: flex; width: 80%;">
       <input type="text" placeholder="Search.." name="search box">
@@ -37,7 +40,7 @@ for inventory, just create the boxes for each item<a -->
       </button>
     </form>
   </div>
-  
+
   <div class="filters">
     <div class="box filters" style="background: transparent; border: none;">
       <h3>
@@ -51,54 +54,57 @@ for inventory, just create the boxes for each item<a -->
           <div>Type:</div>
           <br>
           <div class="type-filter">
-            <button class="filter-btn clothes" onclick="activateButton(this)">Clothes
+            <button class="filter-btn clothes" onclick="activateButton(this);filterSelection('clothes')">Clothes
             <i class="fa fa-times" style="margin-left: 5px;"></i></button>
-            <button class="filter-btn furniture" onclick="activateButton(this)">Furniture
+            <button class="filter-btn furniture" onclick="activateButton(this);filterSelection('furniture')">Furniture
             <i class="fa fa-times" style="margin-left: 5px;"></i></button>
-            <button class="filter-btn other" onclick="activateButton(this)">Other
+            <button class="filter-btn other" onclick="activateButton(this);filterSelection('other')">Other
             <i class="fa fa-times" style="margin-left: 5px;"></i></button>
+<!--            <button class="filter-btn all" onclick="activateButton(this);filterSelection('all')">All-->
+<!--            <i class="fa fa-times" style="margin-left: 5px;"></i></button>-->
           </div>
         </div>
-        
+
         <div class="filter-size-div">
           <div>
             Size:
           </div>
           <br>
           <div class="size wrapper" style="grid-template-columns: repeat(2, minmax(50px, 1fr)); grid-gap: 10px; width: 85%">
-            <button class="filter-btn small" onclick="activateButton(this)">
+            <button class="filter-btn small" onclick="activateButton(this); filterSelection('sz-s')">
             S
             </button>
-            <button class="filter-btn med" onclick="activateButton(this)">
+            <button class="filter-btn med" onclick="activateButton(this); filterSelection('sz-m')">
             M
             </button>
-            <button class="filter-btn large" onclick="activateButton(this)">
+            <button class="filter-btn large" onclick="activateButton(this); filterSelection('sz-l')">
             L
             </button>
-            <button class="filter-btn xlarge" onclick="activateButton(this)">
+            <button class="filter-btn xlarge" onclick="activateButton(this); filterSelection('sz-xl')">
             XL+
             </button>
           </div>
         </div>
-        
-        <div class="wrapper filter-price" style="grid-template-columns: repeat(1, minmax(200px, 1fr))"> 
+
+        <div class="wrapper filter-price" style="grid-template-columns: repeat(1, minmax(200px, 1fr))">
           Price Range:
           <div class="price-input">
             <div class="price-field" style="grid-template-columns: repeat(2, minmax(200px, 1fr))">
-              <input type="number" 
-                     id="min-input" 
+              <input type="number"
+                     id="min-input"
                      value="00.00"
                      style="width: 30%;
                      font-family: Monaco;"
                      step="0.01">
               <span>-</span>
-              <input 
-                     type="number" 
-                     id="max-input" 
+              <input
+                     type="number"
+                     id="max-input"
                      value="00.00"
                      style="width: 30%;
                      font-family: Monaco;"
                      step="00.01">
+              <button class="button" onclick="filterPrice([min-input.value, max-input.value])"><i class="fa fa-check"></i></button>
              <p class="warning" id="min-warning">
                Warning: the minimum must be lower than the maximum!
              </p>
@@ -108,11 +114,25 @@ for inventory, just create the boxes for each item<a -->
       </div>
     </div>
   </div>
-  <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
-    <div class="item-box 1">Input image + info</div>
-    <div class="item-box 2">Input image + info</div>
-    <div class="item-box 3">Input image + info</div>
-    <div class="item-box 4">Input image + info</div>
+  <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+
+    <div class="item-box clothes sz-s"><img src="blue thumbs up.png">
+      <span id="item-name1">Test Obj Clothes S</span><br><span id="item-price1">$14.99</span><br>
+      <div style="text-align: right;" id="id-num1">ID: 123456</div></div>
+
+    <div class="item-box furniture sz-l"><img src="blue thumbs up.png">
+      <span id="item-name2">Test Obj Furniture L</span><br><span id="item-price2">$14.99</span><br>
+      <div style="text-align: right;" id="id-num2">ID: 123456</div></div>
+
+    <div class="item-box toy furniture sz-m"><img src="blue thumbs up.png">
+      <span id="item-name3">Test Obj Furniture and Toy M</span><br><span id="item-price3">$14.99</span><br>
+      <div style="text-align: right;" id="id-num3">ID: 123456</div></div>
+
+    <div class="item-box other sz-xl"><img src="blue thumbs up.png">
+      <span id="item-name4">Test Obj Other XL</span><br><span id="item-price4">$14.99</span><br>
+      <div style="text-align: right;" id="id-num4">ID: 123456</div></div>
   </div>
-  
+
+    <script src="script.js"></script>
+
 </div>
