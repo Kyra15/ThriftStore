@@ -1,7 +1,5 @@
 # ThriftStore
 
-Sprint 2:
-  - Creating the store inventory page
-  - Everyone
-  - NEXT MEETING!! - general shell and decorative elements
-
+Sprint 3:
+  - CSS + HTML for website
+  - Integrate with Andrey's pre-existing html/css
