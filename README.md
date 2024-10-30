@@ -1,7 +1,7 @@
 # ThriftStore
 
 ## Sprint 3:
-  - CSS + HTML for website
+  - CSS + HTML + JS for website
   - Integrate with Andrey's pre-existing html/css
 ###  inventory page
   - HTML/CSS/JS
