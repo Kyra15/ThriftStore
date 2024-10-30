@@ -4,9 +4,9 @@
   - CSS + HTML + JS for website
   - Integrate with Andrey's pre-existing html/css
 ###  inventory page
-  - HTML/CSS/JS - DONE
-  - filtering by size, type, and price - DONE
-  - search func - DONE
+  - ~~HTML/CSS/JS~~
+  - ~~filtering by size, type, and price~~
+  - ~~search func~~
   - logout (a later thing probs)
 ###  item page
   - HTML/CSS/JS
