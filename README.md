@@ -24,3 +24,7 @@
   - Inventory:
     - Issues with priority with filtering, currently does an "or" operation instead of "and" to find intersection
     - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big
+
+## FUTURE STUFF:
+  - Be able to add more types (should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it
+  - Editing stock- changing type, size, details, price, etc.
