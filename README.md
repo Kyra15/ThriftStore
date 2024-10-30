@@ -6,7 +6,7 @@
 ###  inventory page
   - ~~HTML/CSS/JS~~
   - ~~filtering by size, type, and price~~
-  - ~~search func~~
+  - ~~searching function~~
   - logout (a later thing probs)
 ###  item page
   - HTML/CSS/JS
