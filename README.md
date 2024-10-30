@@ -26,5 +26,5 @@
     - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big
 
 ## FUTURE STUFF:
-  - Be able to add more types (should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it
+  - Be able to add more types (should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it or edit)
   - Editing stock- changing type, size, details, price, etc.
