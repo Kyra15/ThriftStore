@@ -7,16 +7,19 @@
   - ~~HTML/CSS/JS~~
   - ~~filtering by size, type, and price~~
   - ~~searching function~~
-  - logout (a later thing probs)
+  - logout (a later thing probs) also page connection to login
+  - page connection from this to item page
 ###  item page
   - HTML/CSS/JS
   - adding from stock (use andrey's func)
   - removing from stock (use andrey's func)
   - carry over logout func
+  - page connection from this back to inventory
   - ASK ANDREY FOR SQL DATABASE INSTEAD OF PKL FOR STOCK?
 ###  login page
   - HTML/CSS/JS
   - logging in
+  - page connection from this to inventory page
   - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
 
 ## KNOWN PROBLEMS:
