@@ -110,7 +110,6 @@ function priceSelection() {
     var max_price = parseFloat(document.getElementById('max-input').value) || Infinity;
 
     let items = document.getElementsByClassName('item-box');
-    window.alert("items" + items);
 
     for (i = 0; i < items.length; i++) {
         let priceText = items[i].getElementsByClassName('item-price')[0].textContent;
