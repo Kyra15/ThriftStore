@@ -4,14 +4,15 @@
   - CSS + HTML + JS for website
   - Integrate with Andrey's pre-existing html/css
 ###  inventory page
-  - HTML/CSS/JS
-  - filtering by size, type, and price
-  - search func
-  - logout
+  - HTML/CSS/JS - DONE
+  - filtering by size, type, and price - DONE
+  - search func - DONE
+  - logout (a later thing probs)
 ###  item page
   - HTML/CSS/JS
   - adding from stock (use andrey's func)
   - removing from stock (use andrey's func)
+  - carry over logout func
   - ASK ANDREY FOR SQL DATABASE INSTEAD?
 ###  login page
   - HTML/CSS/JS
