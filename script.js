@@ -50,6 +50,7 @@ function filterSelection(c) {
     for (let i = 0; i < x.length; i++) {
       final_array.push(x[i]);
     }
+    compareLists();
     return;
   }
 
@@ -59,39 +60,43 @@ function filterSelection(c) {
       final_array.push(x[i]);
     }
   }
+  compareLists();
 }
 
 
-var selected_price = [];
+var selected_size = [];
 filterSize("all");
 function filterSize(c) {
   
   if (c == "all") {
-    selected_price = [];
+    selected_size = [];
   } else {
-    const index = selected_price.indexOf(c);
+    const index = selected_size.indexOf(c);
     if (index > -1) {
-        selected_price.splice(index, 1);
+        selected_size.splice(index, 1);
     } else {
-        selected_price.push(c);
+        selected_size.push(c);
     }
   }
 
   var x = document.getElementsByClassName("item-box");
-  if (selected_price.length == 0) {
+  if (selected_size.length == 0) {
     for (let i = 0; i < x.length; i++) {
       final_array.push(x[i]);
     }
+    compareLists();
     return;
   }
 
   for (let i = 0; i < x.length; i++) {
     final_array.splice(i, 1);
-    if (selected_price.some(cat => x[i].className.indexOf(cat) > -1)) {
+    if (selected_size.some(cat => x[i].className.indexOf(cat) > -1)) {
       final_array.push(x[i]); 
     }
   }
+  compareLists();
 }
+
 
 function priceSelection() {
     var min_price = parseFloat(document.getElementById('min-input').value) || 0;
@@ -109,6 +114,7 @@ function priceSelection() {
             final_array.splice(i, 1);
         }
     }
+    compareLists();
 }
 
 
@@ -122,9 +128,7 @@ function compareLists() {
 }
 
 
-// issues with priority of selection -> if you do clothes + m you'll get
-// both the clothes obj and the furniture/toy cuz that's m
-// but this isn't super important
+// fixed priority hopefully, but now sorting doesnt work :((((
 
 function AddCat(element, name) {
   var i, arr1, arr2;
@@ -149,7 +153,7 @@ function RemoveCat(element, name) {
   element.className = arr1.join(" ");
 }
 
-// this is will make it so search is updated while typing
+// this commented line will make it so search is updated while typing
 // but idrc if its used cuz its not super useful
 //document.getElementById('searchbar').addEventListener('input', lookUp);
 function lookUp() {
