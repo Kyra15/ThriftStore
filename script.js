@@ -87,7 +87,8 @@ function RemoveCat(element, name) {
   element.className = arr1.join(" ");
 }
 
-
+// this is will make it so search is updated while typing
+// but idrc if its used cuz its not super useful
 //document.getElementById('searchbar').addEventListener('input', lookUp);
 function lookUp() {
     let input = document.getElementById('searchbar').value
@@ -100,6 +101,25 @@ function lookUp() {
         }
         else {
             AddCat(x[i], "show-item");
+        }
+    }
+}
+
+function priceSelection() {
+    var min_price = parseFloat(document.getElementById('min-input').value) || 0;
+    var max_price = parseFloat(document.getElementById('max-input').value) || Infinity;
+
+    let items = document.getElementsByClassName('item-box');
+    window.alert("items" + items);
+
+    for (i = 0; i < items.length; i++) {
+        let priceText = items[i].getElementsByClassName('item-price')[0].textContent;
+        let it_price = parseFloat(priceText.replace('$', ''));
+        if (it_price <= max_price && it_price >= min_price) {
+            AddCat(items[i], "show-item");
+        }
+        else {
+            RemoveCat(items[i], "show-item");
         }
     }
 }
