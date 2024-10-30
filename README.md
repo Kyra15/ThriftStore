@@ -26,6 +26,7 @@
   (strikethrough once they're fixed)
   - Inventory:
     - Issues with priority with filtering, currently does an "or" operation instead of "and" to find intersection
+        - Can be fixed by filtering and adding items to a tuple for every category (do they have those in js??) and then only showing the stuff in that tuple
     - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big
 
 ## FUTURE STUFF:
