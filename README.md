@@ -13,11 +13,11 @@
   - adding from stock (use andrey's func)
   - removing from stock (use andrey's func)
   - carry over logout func
-  - ASK ANDREY FOR SQL DATABASE INSTEAD?
+  - ASK ANDREY FOR SQL DATABASE INSTEAD OF PKL FOR STOCK?
 ###  login page
   - HTML/CSS/JS
   - logging in
-  - ASK FOR SQL DATABASE
+  - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
 
 ## KNOWN PROBLEMS:
   - Inventory:
