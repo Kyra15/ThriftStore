@@ -30,6 +30,7 @@ document.getElementById('min-input').addEventListener('blur', function() {
 
 
 var selected = [];
+var final_array = []
 filterSelection("all")
 function filterSelection(c) {
 
@@ -47,18 +48,79 @@ function filterSelection(c) {
   var x = document.getElementsByClassName("item-box");
   if (selected.length == 0) {
     for (let i = 0; i < x.length; i++) {
-      AddCat(x[i], "show-item");
+      final_array.push(x[i]);
     }
     return;
   }
 
   for (let i = 0; i < x.length; i++) {
-    RemoveCat(x[i], "show-item");
+    final_array.splice(i, 1);
     if (selected.some(cat => x[i].className.indexOf(cat) > -1)) {
-      AddCat(x[i], "show-item");
+      final_array.push(x[i]);
     }
   }
 }
+
+
+var selected_price = [];
+filterSize("all");
+function filterSize(c) {
+  
+  if (c == "all") {
+    selected_price = [];
+  } else {
+    const index = selected_price.indexOf(c);
+    if (index > -1) {
+        selected_price.splice(index, 1);
+    } else {
+        selected_price.push(c);
+    }
+  }
+
+  var x = document.getElementsByClassName("item-box");
+  if (selected_price.length == 0) {
+    for (let i = 0; i < x.length; i++) {
+      final_array.push(x[i]);
+    }
+    return;
+  }
+
+  for (let i = 0; i < x.length; i++) {
+    final_array.splice(i, 1);
+    if (selected_price.some(cat => x[i].className.indexOf(cat) > -1)) {
+      final_array.push(x[i]); 
+    }
+  }
+}
+
+function priceSelection() {
+    var min_price = parseFloat(document.getElementById('min-input').value) || 0;
+    var max_price = parseFloat(document.getElementById('max-input').value) || Infinity;
+
+    let items = document.getElementsByClassName('item-box');
+
+    for (i = 0; i < items.length; i++) {
+        let priceText = items[i].getElementsByClassName('item-price')[0].textContent;
+        let it_price = parseFloat(priceText.replace('$', ''));
+        if (it_price <= max_price && it_price >= min_price) {
+            final_array.push(items[i]); 
+        }
+        else {
+            final_array.splice(i, 1);
+        }
+    }
+}
+
+
+function compareLists() {
+  const unique_set = new Set(final_array);
+  var unique_array = [...unique_set];
+  
+  for (i=0; i < unique_array.length;  i++) {
+    AddCat(unique_array[i], "show-item");
+  }
+}
+
 
 // issues with priority of selection -> if you do clothes + m you'll get
 // both the clothes obj and the furniture/toy cuz that's m
@@ -101,24 +163,6 @@ function lookUp() {
         }
         else {
             AddCat(x[i], "show-item");
-        }
-    }
-}
-
-function priceSelection() {
-    var min_price = parseFloat(document.getElementById('min-input').value) || 0;
-    var max_price = parseFloat(document.getElementById('max-input').value) || Infinity;
-
-    let items = document.getElementsByClassName('item-box');
-
-    for (i = 0; i < items.length; i++) {
-        let priceText = items[i].getElementsByClassName('item-price')[0].textContent;
-        let it_price = parseFloat(priceText.replace('$', ''));
-        if (it_price <= max_price && it_price >= min_price) {
-            AddCat(items[i], "show-item");
-        }
-        else {
-            RemoveCat(items[i], "show-item");
         }
     }
 }
