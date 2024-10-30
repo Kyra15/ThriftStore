@@ -20,6 +20,7 @@
   - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
 
 ## KNOWN PROBLEMS:
+  (strikethrough once they're fixed)
   - Inventory:
     - Issues with priority with filtering, currently does an "or" operation instead of "and" to find intersection
-    - Spacing and sizing is really weird: when there's only a few items item boxes get super big
+    - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big
