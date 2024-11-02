@@ -18,6 +18,9 @@
   - page connection from this to create item page
   - init based on stock database
 ###  item page
+- Features:
+  - see price, details, n images of the item
+- Things to do:
   - HTML/CSS/JS
   - adding from stock (use andrey's func)
   - removing from stock (use andrey's func)
@@ -25,6 +28,10 @@
   - page connection from this back to inventory
   - ASK ANDREY FOR SQL DATABASE INSTEAD OF PKL FOR STOCK?
 ###  login page
+- Features:
+  - login 🤯
+  - hide or show password ig
+- Things to do:
   - ~~HTML/CSS/JS~~
   - logging in (page connection from this to inventory page w/o logic for now)
   - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
