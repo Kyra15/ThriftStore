@@ -86,7 +86,6 @@ img {
 .button {
   border-radius: 10px;
   color: white;
-  font-weight: normal;
   background-color: #ff904d;
   text-align: center;
   font-size: 18px;
@@ -202,4 +201,21 @@ hr.black-border {
 
 .show-item {
   display: block;
+}
+
+
+.login input {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 55%;
+  background: #fff;
+  padding: 6px;
+  font-family: Monaco;
+}
+
+
+.clickable {
+    cursor: pointer;
 }
