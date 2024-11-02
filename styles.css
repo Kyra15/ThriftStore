@@ -222,15 +222,14 @@ hr.black-border {
 
 
 .item-slideshow {
+    width: 80%;
     display: none;
+    border: 2px solid black;
 }
 
 .item-slideshow img {
-    border: 2px solid black;
     float: right;
     margin-right: 15px;
-    width: 80%;
-    overflow: hidden;
 }
 
 .item-slideshow button {
