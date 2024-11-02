@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="wrapper top-nav">
+  <div class="header-box">
+    <div class="left-text">Inventory</div>
+    <div class="right-text">Food Pantry</div>
+  </div>
+  <div class="header-logo">Poverello</div>
+</div>
+
+<br>
+<form class="logout" action="logout.php" style="display: block;">
+  <button class="button">Logout</button>
+</form>
+<br>
+
+<div class="item-page" style="display: flex;">
+    <div class="item-info" style="flex:1; padding: 20px">
+        <h1 id="item-name">Item Name</h1>
+        <hr class="black-border">
+        <h2 id="item-price">Price: </h2><span style="font-size: 120%;">$14.99</span>
+        <br>
+        <h2 id="item-details">Details: </h2> <p>
+        yap yap yap
+        Monkeys are intelligent animals that are good at solving problems.
+        Almost all types live together in groups.
+        A monkey group commonly includes several related females, their young, and one or more males.
+        Monkeys use facial expressions, body movements, and various noises to communicate with each other.</p>
+        <br>
+        <h3>Categories: </h3> <p>Clothes, Small, Monkey</p>
+        <form class="edit_info" action="edit_info.php">
+            <button class="button" style="float: right">
+                Edit Details
+                <i class="clickable fa fa-pencil" style="margin-left: 5px;"></i>
+                </button>
+        </form>
+    </div>
+    <div class="item-image" style="flex:1;">
+        <img src="blue thumbs up.png" style="border: 2px solid black; float: right; margin-right: 15px" width="80%">
+    </div>
+</div>
