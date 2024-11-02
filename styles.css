@@ -25,13 +25,12 @@ body {
   color: #000;
   border-radius: 3px;
   padding: 15px;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  font-size: 1.2vw;
+  padding-left: 13vw;
+  padding-right: 13vw;
+  font-size: 100%;
   grid-column-start: 1;
   grid-column-end: 4;
   border: 2px solid black;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
@@ -87,14 +86,15 @@ img {
 .button {
   border-radius: 10px;
   color: white;
+  font-weight: normal;
   background-color: #ff904d;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px;
   font-family: Monaco;
 }
 
-.button.active {
+.button:active {
   background-color: #d16f2a;
 }
 
@@ -106,7 +106,7 @@ hr.black-border {
 
 .search input[type=text] {
   padding: 10px;
-  font-size: 17px;
+  font-size: 18px;
   border: 2px solid black;
   border-radius: 10px 0 0 10px;
   float: left;
@@ -122,7 +122,7 @@ hr.black-border {
   padding: 10px;
   background: #fb944c;
   color: white;
-  font-size: 17px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 0 10px 10px 0;
   height: 50px;
@@ -138,7 +138,7 @@ hr.black-border {
   padding: 5px;
   background: transparent;
   color: black;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
   font-family: Monaco;
