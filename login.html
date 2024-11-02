@@ -1,1 +1,40 @@
+<!-- Base, very plain? might find better looking alt to this -->
+<!DOCTYPE html>
+<html>
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="wrapper top-nav">
+  <div class="header-box">
+    <div class="left-text">Inventory</div>
+    <div class="right-text">Food Pantry</div>
+  </div>
+  <div class="header-logo">Poverello</div>
+</div>
+
+<br><br><br><br>
+
+<div class="login-body wrapper">
+    <h1 style="text-align: center; padding-bottom: 0; grid-column-start: 1; grid-column-end: 4;">Admin Page</h1>
+    <form class="login" action="login.php" style="text-align: center; grid-column-start: 1; grid-column-end: 4;">
+        <h2>
+            <span>Username: </span>
+            <input type="text" id="username">
+        </h2>
+        <h2>
+            <span>Password: </span>
+            <input type="password" id="password">
+            <i class="clickable fa fa-eye" id="eye-icon" style="margin-left: 5px;"></i>
+        </h2>
+        <br>
+        <button class="clickable button" type="submit">Login</button>
+    </form>
+    <br><br><br>
+<!--    <img src="poverello_logo.png" width="40%" style="text-align: center;  grid-column-start: 1; grid-column-end: 4;">-->
+    <script src="tempscript_login.js"></script>
+</div>
