@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -43,7 +43,16 @@
                 </button>
         </form>
     </div>
-    <div class="item-image" style="flex:1;">
-        <img src="blue thumbs up.png" style="border: 2px solid black; float: right; margin-right: 15px" width="80%">
+    <div  style="flex:1;">
+        <div class="item-image">
+            <img class="item-slideshow" src="blue thumbs up.png">
+            <img class="item-slideshow" src="blue wow.png">
+        </div>
+        <div class="slide-scroll" style="display: flex; justify-content: center; margin-top: 10px; align-items: center;">
+            <button class="button" style="background: transparent; color: black" onclick="plusDivs(-1)">&#10094;</button>
+            <p style="margin: 10px"><span id="slide-num">1</span> out of <span id="total-slides">2</span></p>
+            <button class="button" style="background: transparent; color: black" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
     </div>
+    <script src="tempscript_item.js"></script>
 </div>
