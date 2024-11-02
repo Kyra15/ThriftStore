@@ -219,3 +219,28 @@ hr.black-border {
 .clickable {
     cursor: pointer;
 }
+
+
+.item-slideshow {
+    display: none;
+}
+
+.item-slideshow img {
+    border: 2px solid black;
+    float: right;
+    margin-right: 15px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.item-slideshow button {
+    padding: 5px;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: Monaco;
+    border: 1px solid black;
+    transition: all 0.3s;
+}
