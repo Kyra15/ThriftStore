@@ -18,7 +18,7 @@
   - page connection from this back to inventory
   - ASK ANDREY FOR SQL DATABASE INSTEAD OF PKL FOR STOCK?
 ###  login page
-  - HTML/CSS/JS
+  - ~~HTML/CSS/JS~~
   - logging in
   - page connection from this to inventory page
   - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
