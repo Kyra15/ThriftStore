@@ -16,6 +16,7 @@
   - logout (a later thing probs) also page connection to login
   - page connection from this to item page
   - page connection from this to create item page
+  - init based on stock database
 ###  item page
   - HTML/CSS/JS
   - adding from stock (use andrey's func)
@@ -38,5 +39,6 @@
 ## FUTURE STUFF:
   - Be able to add more types (like food, clothes, furniture, toy, etc. should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it or edit)
   - Editing stock -  changing type, size, details, price, etc.
+  - Multiple photos per image
   - There's two sides of Poverello - the food pantry and thrift store, do we just need to duplicate it over and create new page connections + databases for the food pantry side?
   - Error handling ish - if there's no photo, should display an error photo or smth
