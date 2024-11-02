@@ -2,7 +2,7 @@
 
 ## Sprint 3:
   - CSS + HTML + JS for website
-  - Integrate with Andrey's pre-existing html/css
+  - Integrate with Andrey's funcs
 ###  inventory page
   - ~~HTML/CSS/JS~~
   - ~~filtering by size, type, and price~~
