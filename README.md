@@ -4,6 +4,12 @@
   - CSS + HTML + JS for website
   - Integrate with Andrey's funcs
 ###  inventory page
+- Features:
+  - search w name or id
+  - filter by type, size, or price
+  - see and scroll through items
+  - works with different sized windows
+- Things to do:
   - ~~HTML/CSS/JS~~
   - ~~filtering by size, type, and price~~
   - ~~searching function~~
