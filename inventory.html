@@ -2,8 +2,9 @@
 
 
 <!--Known issues:
-- issues with priority when using filters, does an "or" operation instead of an "and"
-- issues with scaling item boxes, esp when there are only a few items like 1 item makes the box super big -->
+- issues with scaling item boxes, esp when there are only a few items like 1 item makes the box super big
+- issues w the header n different viewport sizes
+- Also no logout yet -->
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,8 +21,8 @@
 </div>
 
 <br>
-<form class="search" action="logout.php" style="display: flex;">
-  <button class="button logout">Logout</button>
+<form class="logout" action="logout.php" style="display: block;">
+  <button class="button">Logout</button>
 </form>
 <br>
 
@@ -30,7 +31,7 @@
 
   <div class="search-container" style="display: flex; align-items: center; grid-column-start: 1; grid-column-end: 4">
     <div class="search" style="display: flex; width: 80%;">
-      <input type="text" id="searchbar" placeholder="Search.." name="search box">
+      <input type="text" autocomplete="on" id="searchbar" placeholder="Search.." name="search box">
       <button type="button" onclick="lookUp()">
         <i class="fa fa-search"></i>
       </button>
@@ -38,20 +39,23 @@
   </div>
 
   <br>
+  <form class="create-new" action="create_new.php" style="display: flex; grid-column-start: 3; grid-column-end: 4">
+    <button class="button">Create New Item</button>
+  </form>
 
   <div class="items-n-filters" style="grid-column-start: 1; grid-column-end: 4; display: flex">
 
     <div class="filters side-nav" style="flex:1;">
       <div class="box filters" style="background: transparent; border: none;">
-        <h3>
+        <h2>
           Filters
-        </h3>
+        </h2>
         <hr class="black-border">
         <br>
         <br>
         <div class="wrapper filters" style="grid-template-columns: repeat(1, minmax(200px, 1fr))">
           <div class="filter-type-div">
-            <div>Type:</div>
+            <h3>Type:</h3>
             <br>
             <div class="type-filter">
               <button class="filter-btn clothes" onclick="activateButton(this);filterSelection('clothes')">Clothes
@@ -64,35 +68,36 @@
           </div>
 
           <div class="filter-size-div">
-            <div>
+            <h3>
               Size:
-            </div>
+            </h3>
             <br>
             <div class="size wrapper" style="grid-template-columns: repeat(2, minmax(50px, 1fr)); grid-gap: 10px; width: 85%">
-              <button class="filter-btn small" onclick="activateButton(this); filterSelection('sz-s')">
+              <button class="filter-btn small" onclick="activateButton(this); filterSize('sz-s')">
               S
               </button>
-              <button class="filter-btn med" onclick="activateButton(this); filterSelection('sz-m')">
+              <button class="filter-btn med" onclick="activateButton(this); filterSize('sz-m')">
               M
               </button>
-              <button class="filter-btn large" onclick="activateButton(this); filterSelection('sz-l')">
+              <button class="filter-btn large" onclick="activateButton(this); filterSize('sz-l')">
               L
               </button>
-              <button class="filter-btn xlarge" onclick="activateButton(this); filterSelection('sz-xl')">
+              <button class="filter-btn xlarge" onclick="activateButton(this); filterSize('sz-xl')">
               XL+
               </button>
             </div>
           </div>
 
           <div class="wrapper filter-price" style="grid-template-columns: repeat(1, minmax(200px, 1fr))">
-            Price Range:
+            <h3>Price Range:</h3>
             <div class="price-input">
               <div class="price-field" style="grid-template-columns: repeat(2, minmax(200px, 1fr))">
                 <input type="number"
                        id="min-input"
                        value="00.00"
                        style="width: 30%;
-                       font-family: Monaco;"
+                       font-family: Monaco;
+                       font-size: 120%"
                        step="0.01">
                 <span>-</span>
                 <input
@@ -100,10 +105,11 @@
                        id="max-input"
                        value="00.00"
                        style="width: 30%;
-                       font-family: Monaco;"
+                       font-family: Monaco;
+                       font-size: 120%"
                        step="00.01">
                 <button class="button" onclick="priceSelection()"><i class="fa fa-check"></i></button>
-               <p class="warning" id="min-warning">
+               <p class="warning" id="price-warning">
                  Warning: the minimum must be lower than the maximum!
                </p>
               </div>
@@ -113,7 +119,7 @@
       </div>
     </div>
 
-    <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); flex:3">
+    <div class="wrapper items" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); flex:2.5">
 
       <div class="item-box clothes sz-s"><img src="blue thumbs up.png">
         <span id="item-name1">Test Obj Clothes S</span><br><span class="item-price id1">$14.99</span><br>
