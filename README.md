@@ -20,6 +20,7 @@
 ###  item page
 - Features:
   - see price, details, n images of the item
+  - scroll through images
 - Things to do:
   - HTML/CSS/JS
   - adding from stock (use andrey's func)
@@ -35,6 +36,15 @@
   - ~~HTML/CSS/JS~~
   - logging in (page connection from this to inventory page w/o logic for now)
   - ASK FOR SQL DATABASE FOR USER LOGIN INSTEAD OF PKL
+ 
+###  create/edit page
+- Features:
+- Things to do:
+  - HTML/CSS/JS
+  - carry over logout func
+  - saving stuff to the sql or pkl thing
+  - page connection between inventory
+  - page recive based on if editing or creating new
 
 ## KNOWN PROBLEMS:
   (strikethrough once they're fixed)
@@ -46,6 +56,6 @@
 ## FUTURE STUFF:
   - Be able to add more types (like food, clothes, furniture, toy, etc. should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it or edit)
   - Editing stock -  changing type, size, details, price, etc.
-  - Multiple photos per image
+  - ~~Multiple photos per item~~
   - There's two sides of Poverello - the food pantry and thrift store, do we just need to duplicate it over and create new page connections + databases for the food pantry side?
   - Error handling ish - if there's no photo, should display an error photo or smth
