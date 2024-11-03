@@ -1,6 +1,6 @@
 # ThriftStore
 
-need to organize more i think
+need to organize files n remove all the prints
 
 ## Sprint 3:
   - CSS + HTML + JS for website
