@@ -1,6 +1,6 @@
 # ThriftStore
 
-NEED TO ORGANIZE FILES THIS IS BAD
+need to organize more i think
 
 ## Sprint 3:
   - CSS + HTML + JS for website
