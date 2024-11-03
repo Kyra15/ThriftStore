@@ -1,5 +1,7 @@
 # ThriftStore
 
+NEED TO ORGANIZE FILES THIS IS BAD
+
 ## Sprint 3:
   - CSS + HTML + JS for website
   - Integrate with Andrey's funcs
