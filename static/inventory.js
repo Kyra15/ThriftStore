@@ -67,7 +67,7 @@ function appendHTML(ele, div_info) {
     newDiv.className = `item-box ${type} ${size} show-item`
     newDiv.id = id;
     newDiv.innerHTML = `
-        <img src="${images[0]}">
+        <img src="images/${images[0]}">
         <span id="item-name1">${name}</span><br>
         <span class="item-price ${id}">$${price}</span><br>
         <div style="text-align: right;">ID: ${id}</div>
