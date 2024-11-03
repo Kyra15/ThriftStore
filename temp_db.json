@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 123454,
+      "name": "Monkey Shirt",
+      "price": 14.99,
+      "type": "clothes",
+      "description": "Monkeys are intelligent animals that are good at solving problems.",
+      "tags": ["small", "shirt", "monkey", "clothes"],
+      "size": "sz-s",
+      "stock": 50,
+      "images": ["blue thumbs up.png", "blue wow.png"]
+    },
+    {
+      "id": 123455,
+      "name": "Couch",
+      "price": 24.99,
+      "type": "furniture",
+      "description": "Almost all types live together in groups.",
+      "tags": ["large", "couch", "furniture"],
+      "size": "sz-l",
+      "stock": 20,
+      "images": ["blue wow.png"]
+    },
+    {
+      "id": 123456,
+      "name": "Slide",
+      "price": 4.99,
+      "type": "furniture other",
+      "description": "A monkey group commonly includes several related females, their young, and one or more males.",
+      "tags": ["furniture", "toy", "extra-large", "slide"],
+      "size": "sz-xl",
+      "stock": 30,
+      "images": ["blue wow.png"]
+    },
+    {
+      "id": 123457,
+      "name": "Hula Hoop",
+      "price": 54.99,
+      "type": "other",
+      "description": "Monkeys use facial expressions, body movements, and various noises to communicate with each other",
+      "tags": ["medium", "toys", "hula hoop"],
+      "size": "sz-m",
+      "stock": 10,
+      "images": ["blue thumbs up.png"]
+    }
+  ]
+}
