@@ -17,9 +17,14 @@
 </div>
 
 <br>
-<form class="logout" action="logout.php" style="display: block;">
+<form class="logout" action="javascript:changePage('login.html')" style="display: block; text-align: right;">
   <button class="button">Logout</button>
 </form>
+<form class="back" action="javascript:changePage('inventory.html')" style="display: block;">
+  <button class="button" style="background: transparent; color: black; border:2px solid gray">
+      <i class="clickable fa fa-backward" style="margin-right: 5px;"></i>Back</button>
+</form>
+
 <br>
 
 <div class="item-page" style="display: flex;">
@@ -54,5 +59,6 @@
             <button class="button" style="background: transparent; color: black" onclick="plusDivs(+1)">&#10095;</button>
         </div>
     </div>
-    <script src="tempscript_item.js"></script>
+    <script src="item.js"></script>
+    <script src="script.js"></script>
 </div>
