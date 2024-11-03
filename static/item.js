@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchFromDB();
 });
 
+
+// https://www.w3schools.com/jsref/api_fetch.asp
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 function fetchFromDB() {
     fetch('temp_db.json')
     .then(response => {
@@ -30,7 +33,6 @@ function fetchFromDB() {
     .catch(error => {
         console.error('error fix it ig:', error);
     });
-
 }
 
 
