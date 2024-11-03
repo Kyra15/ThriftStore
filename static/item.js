@@ -41,10 +41,20 @@ function updateHTML(product) {
     document.getElementById("item-name").textContent = product.name;
     document.getElementById("item-price").textContent = product.price;
     document.getElementById("item-details").textContent = product.description;
-    document.getElementById("item-categories").textContent = product.categories;
+
+    product.tags.forEach((tag, index) => addTag(tag, index, product.tags.length));
 
     product.images.forEach(createImage);
     showDivs(slideIndex);
+}
+
+function addTag(str, ind, tags_len) {
+    title_str = toTitleCase(str);
+    if (ind == tags_len-1) {
+        document.getElementById("item-categories").textContent += title_str + " ";
+    } else {
+        document.getElementById("item-categories").textContent += title_str + ", "
+    }
 }
 
 function createImage(img_url) {

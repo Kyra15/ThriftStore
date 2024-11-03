@@ -30,7 +30,7 @@ need to organize files n remove all the prints
   - ~~HTML/CSS/JS~~
   - adding from stock (use andrey's func)
   - removing from stock (use andrey's func)
-  - populate correct stock info
+  - ~~populate correct stock info~~
   - ~~carry over logout func~~
   - ~~page connection from this back to inventory~~
   - ASK ANDREY FOR SQL DATABASE INSTEAD OF PKL FOR STOCK?
@@ -51,7 +51,7 @@ need to organize files n remove all the prints
   - carry over logout func
   - saving stuff to the sql or pkl thing
   - page connection between inventory
-  - page recive based on if editing or creating new
+  - page receive based on if editing or creating new
 
 ## KNOWN PROBLEMS:
   (strikethrough once they're fixed)
