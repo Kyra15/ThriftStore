@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // https://www.w3schools.com/jsref/api_fetch.asp
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 function fetchFromDB() {
-    fetch('temp_db.json')
+    fetch('/productsdb')
     .then(response => {
         if (!response.ok) {
             throw new Error('network response error oops ' + response.statusText);
@@ -21,7 +21,7 @@ function fetchFromDB() {
     .then(data => {
         // have to get only one object based on id
         console.log(item_id)
-        const product_data = data.products.find((item) => item.id == item_id);
+        const product_data = data.find((item) => item.id == item_id);
 
         if (product_data) {
             console.log("product", product_data.id);
@@ -42,9 +42,12 @@ function updateHTML(product) {
     document.getElementById("item-price").textContent = product.price;
     document.getElementById("item-details").textContent = product.description;
 
-    product.tags.forEach((tag, index) => addTag(tag, index, product.tags.length));
+    let tags = product.tags.replace(/['"\[\]]/g, "").split(", ");
+    let images = product.images.replace(/['"\[\]]/g, "").split(", ");
+    console.log(images);
+    tags.forEach((tag, index) => addTag(tag, index, product.tags.length));
+    images.forEach(createImage);
 
-    product.images.forEach(createImage);
     showDivs(slideIndex);
 }
 
@@ -60,7 +63,7 @@ function addTag(str, ind, tags_len) {
 function createImage(img_url) {
     const newImg = document.createElement('img');
     newImg.className = "item-slideshow";
-    newImg.src = `images/${img_url}`;
+    newImg.src = `static/images/${img_url}`;
     document.getElementById("item-slides-container").appendChild(newImg);
 }
 
@@ -90,4 +93,8 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
   document.getElementById("slide-num").textContent = slideIndex;
   document.getElementById("total-slides").textContent = x.length;
+}
+
+function editPage(link) {
+    window.location.href = link + "?id=" + item_id;
 }

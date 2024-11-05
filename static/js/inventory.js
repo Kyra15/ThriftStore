@@ -33,7 +33,7 @@ function minMaxCheck() {
 
 // https://www.w3schools.com/jsref/api_fetch.asp
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-fetch('temp_db.json')
+fetch('/productsdb')
     .then(response => {
         if (!response.ok) {
             throw new Error('network response error oops ' + response.statusText);
@@ -41,7 +41,8 @@ fetch('temp_db.json')
         return response.json();
     })
     .then(data => {
-        displayProducts(data.products);
+        console.log(data)
+        displayProducts(data);
         filterSelection("all");
         filterSize("all");
         priceSelection();
@@ -68,8 +69,9 @@ function appendHTML(ele, div_info) {
     const newDiv = document.createElement('div');
     newDiv.className = `item-box ${type} ${size} show-item`
     newDiv.id = id;
+    var parsedImages = JSON.parse(images);
     newDiv.innerHTML = `
-        <img src="images/${images[0]}">
+        <img src="static/images/${parsedImages[0]}">
         <span id="item-name1">${name}</span><br>
         <span class="item-price ${id}">$${price}</span><br>
         <div style="text-align: right;">ID: ${id}</div>
@@ -223,6 +225,7 @@ function RemoveCat(element, name) {
 // Uncomment to get it to search while typing i js dont rly need it rn
 // document.getElementById('searchbar').addEventListener('input', lookUp);
 function lookUp() {
+    // need to change this to search though tags, not just name
     let input = document.getElementById('searchbar').value.toLowerCase();
     const items = document.getElementsByClassName('item-box');
 
@@ -239,9 +242,8 @@ function createPage() {
     const item_boxes = document.querySelectorAll(".item-box");
     item_boxes.forEach(i => {
         i.addEventListener('click', function() {
-            console.log("hi", i.id);
             let id_num = i.id;
-            changePage(`item.html?id=${id_num}`);
+            changePage(`item?id=${id_num}`);
         });
     });
 }

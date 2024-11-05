@@ -27,7 +27,7 @@ body {
   padding: 15px;
   padding-left: 13vw;
   padding-right: 13vw;
-  font-size: 100%;
+  font-size: 150%;
   grid-column-start: 1;
   grid-column-end: 4;
   border: 2px solid black;

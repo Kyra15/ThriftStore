@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/styles.css">
     <title>Poverello Inventory</title>
 </head>
 
@@ -18,10 +18,10 @@
 </div>
 
 <br>
-<form class="logout" action="javascript:changePage('login.html')" style="display: block; text-align: right;">
+<form class="logout" action="javascript:changePage('login')" style="display: block; text-align: right;">
   <button class="button">Logout</button>
 </form>
-<form class="back" action="javascript:changePage('inventory.html')" style="display: block;">
+<form class="back" action="javascript:changePage('inventory')" style="display: block;">
   <button class="button" style="background: transparent; color: black; border:2px solid gray">
       <i class="clickable fa fa-backward" style="margin-right: 5px;"></i>Back</button>
 </form>
@@ -32,17 +32,12 @@
     <div class="item-info" style="flex:1; padding: 20px">
         <h1 id="item-name">Item Name</h1>
         <hr class="black-border">
-        <h2>Price: </h2><span id="item-price" style="font-size: 120%;">$14.99</span>
+        <h2>Price: </h2><span id="item-price" style="font-size: 120%;"></span>
         <br>
-        <h2>Details: </h2> <p id="item-details">
-        yap yap yap
-        Monkeys are intelligent animals that are good at solving problems.
-        Almost all types live together in groups.
-        A monkey group commonly includes several related females, their young, and one or more males.
-        Monkeys use facial expressions, body movements, and various noises to communicate with each other.</p>
+        <h2>Details: </h2> <p id="item-details"></p>
         <br>
         <h3>Categories: </h3> <p id="item-categories"></p>
-        <form class="edit_info" action="edit_info.php">
+        <form class="edit_info" action="javascript:editPage('edit')">
             <button class="button" style="float: right">
                 Edit Details
                 <i class="clickable fa fa-pencil" style="margin-left: 5px;"></i>
@@ -50,16 +45,13 @@
         </form>
     </div>
     <div style="flex:1;">
-        <div class="item-image" id="item-slides-container">
-<!--            <img class="item-slideshow" src="images/blue thumbs up.png">-->
-<!--            <img class="item-slideshow" src="images/blue wow.png">-->
-        </div>
+        <div class="item-image" id="item-slides-container"></div>
         <div class="slide-scroll" style="display: flex; justify-content: center; margin-top: 10px; align-items: center;">
             <button class="button" style="background: transparent; color: black" onclick="plusDivs(-1)">&#10094;</button>
             <p style="margin: 10px"><span id="slide-num"></span> out of <span id="total-slides"></span></p>
             <button class="button" style="background: transparent; color: black" onclick="plusDivs(+1)">&#10095;</button>
         </div>
     </div>
-    <script src="static/item.js"></script>
-    <script src="static/script.js"></script>
+    <script src="static/js/item.js"></script>
+    <script src="static/js/script.js"></script>
 </div>
