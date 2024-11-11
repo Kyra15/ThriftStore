@@ -1,5 +1,5 @@
 import json
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, redirect
 import sqlite3
 
 app = Flask(__name__)
@@ -48,6 +48,10 @@ def drop_table():
     conn.close()
 
 
+
+@app.route('/')
+def default():
+    return redirect('/login')
 
 @app.route('/inventory')
 def inventory():
