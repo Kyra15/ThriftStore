@@ -8,7 +8,6 @@ app = Flask(__name__)
 def get_db_connection():
     conn = sqlite3.connect('database.db')
     conn.row_factory = sqlite3.Row
-    print(conn)
     return conn
 
 
@@ -53,6 +52,15 @@ def add_test():
 def drop_table():
     conn = get_db_connection()
     conn.execute('''DROP TABLE IF EXISTS products;''')
+    conn.commit()
+    conn.close()
+
+
+def update_table(id, name, price, typeof, desc, tags, size, stock, imgs):
+    conn = get_db_connection()
+    conn.execute('''UPDATE products
+                    SET name = 'Alfred Schmidt', price= 'Frankfurt', type = ''
+                    WHERE id = 1;''')
     conn.commit()
     conn.close()
 
