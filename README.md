@@ -68,3 +68,4 @@ need to organize files n remove all the prints
   - BUG TESTING!!!!!
   - There should be some way of viewing who added stuff n when like pwp log (PCI compliant!!!!!)
   - There should be something in the corner with the current users name
+  - Search based off of tags
