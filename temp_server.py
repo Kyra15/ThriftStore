@@ -37,6 +37,15 @@ def add_test():
                  ("Monkey Shirt", 14.99, "clothes",
                   "Monkeys are intelligent animals that are good at solving problems.",
                   tags_json, "sz-s", 50, images_json))
+
+    tags_json2 = json.dumps(["large", "couch", "furniture", "home decor"])
+    images_json2 = json.dumps(["blueWow.png"])
+    conn.execute('''INSERT INTO products(name, price, type, description, tags, size, stock, images)
+                        VALUES(?, ?, ?, ?, ?, ?, ?, ?)''',
+                 ("Couch", 4.99, "furniture",
+                  "Almost all types of monkeys live together in groups.",
+                  tags_json2, "sz-l", 10, images_json2))
+
     conn.commit()
     conn.close()
 
@@ -82,9 +91,9 @@ def get_products():
     return jsonify(product_list)
 
 
-# drop_table()
-# init_db()
-# add_test()
+drop_table()
+init_db()
+add_test()
 
 if __name__ == '__main__':
     print("ugh")
