@@ -30,21 +30,23 @@ just need to send a specific thign saying oh this is new or this is the obj bein
 <div class="item-page" style="display: flex;">
     <div class="item-info" style="flex:1; padding: 20px">
         <h1 id="item-name" contenteditable="true">Item Name</h1>
-        <br><br>
-        <select id="item-type">
+        <br>
+        <select id="item-type" class="minimal dropdown">
             <option>Clothes</option>
             <option>Furniture</option>
             <option>Other</option>
             <option>New</option>
         </select>
-        <select id="item-size">
+        <br><br>
+        <select id="item-size" class="minimal dropdown">
             <option>S</option>
             <option>M</option>
             <option>L</option>
             <option>XL+</option>
         </select>
+        <br><br>
         <hr class="black-border">
-<!--        add all fo the stokc stuff-->
+<!--        add all the stock stuff-->
         <h2>Price: </h2><span id="item-price" style="font-size: 120%;" contenteditable="true"></span>
         <br>
         <h2>Details: </h2><p id="item-details" contenteditable="true"></p>

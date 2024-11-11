@@ -215,6 +215,18 @@ hr.black-border {
   font-family: Monaco;
 }
 
+.dropdown {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 20%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  padding: 6px;
+  font-family: Monaco;
+}
 
 .clickable {
     cursor: pointer;
