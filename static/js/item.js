@@ -45,16 +45,17 @@ function updateHTML(product) {
     let tags = product.tags.replace(/['"\[\]]/g, "").split(", ");
     let images = product.images.replace(/['"\[\]]/g, "").split(", ");
     console.log(images);
-    tags.forEach((tag, index) => addTag(tag, index, product.tags.length));
+    tags.forEach((tag, index) => addTag(tag, index, tags.length));
     images.forEach(createImage);
 
     showDivs(slideIndex);
 }
 
 function addTag(str, ind, tags_len) {
+    console.log(tags_len, "hi");
     title_str = toTitleCase(str);
     if (ind == tags_len-1) {
-        document.getElementById("item-categories").textContent += title_str + " ";
+        document.getElementById("item-categories").textContent += title_str;
     } else {
         document.getElementById("item-categories").textContent += title_str + ", "
     }
