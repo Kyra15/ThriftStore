@@ -58,6 +58,7 @@ need to organize files n remove all the prints
     - ~~Issues with priority with filtering, currently does an "or" operation instead of "and" to find intersection~~
     - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big (not sure if this is a problem tho)
     - Sizing w different viewports is iffy
+    - searches based off of price???? ik what the problem is tho
 
 ## FUTURE STUFF:
   - Be able to add more types (like food, clothes, furniture, toy, etc. should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it or edit)
