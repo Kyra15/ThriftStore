@@ -37,7 +37,6 @@ just need to send a specific thign saying oh this is new or this is the obj bein
             <option>Other</option>
             <option>New</option>
         </select>
-        <br><br>
         <select id="item-size" class="minimal dropdown">
             <option>S</option>
             <option>M</option>
@@ -47,11 +46,11 @@ just need to send a specific thign saying oh this is new or this is the obj bein
         <br><br>
         <hr class="black-border">
 <!--        add all the stock stuff-->
-        <h2>Price: </h2><span id="item-price" style="font-size: 120%;" contenteditable="true"></span>
+        <h2>Price: </h2><span class="edit-border" id="item-price" style="font-size: 120%;" contenteditable="true"></span>
         <br>
-        <h2>Details: </h2><p id="item-details" contenteditable="true"></p>
+        <h2>Details: </h2><p class="edit-border" id="item-details" contenteditable="true"></p>
         <br>
-        <h3>Categories: </h3> <p id="item-categories" contenteditable="true"></p>
+        <h3>Categories: </h3> <p class="edit-border" id="item-categories" contenteditable="true"></p>
         <form class="save_info" action="javascript:saveChanges()">
             <button class="button" style="float: right">
                 Save Changes
@@ -67,6 +66,10 @@ just need to send a specific thign saying oh this is new or this is the obj bein
             <button class="button" style="background: transparent; color: black" onclick="plusDivs(+1)">&#10095;</button>
         </div>
     </div>
+<!--    div for stock, have numerical input as well as minus and add by a certain amount (not sure how to format that)-->
+<!--    also add stock to item page?? idk how i forgot that  -->
+<!--    fix stuff for new category, like have a field open up if you pick new -->
+<!--    saving! split tags on ", " and json dump or wtv i forgot -->
     <script src="static/js/edit.js"></script>
     <script src="static/js/script.js"></script>
 </div>

@@ -103,7 +103,7 @@ function saveChanges() {
       "type": document.getElementById("item-type"),
       "description": document.getElementById("item-details"),
       "tags": ["small", "shirt", "monkey", "clothes"],
-//      "size": document.getElementById("item-size").split("-")[1].replace("+", ""),
+      "size": "sz-" + document.getElementById("item-size").replace("+", ""),
       "stock": 50,
       "images": ["blue thumbs up.png", "blue wow.png"]
     }

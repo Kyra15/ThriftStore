@@ -23,6 +23,14 @@ def init_db():
                         size TEXT,
                         stock REAL NOT NULL,
                         images TEXT)''')
+
+    conn.execute('''CREATE TABLE IF NOT EXISTS users (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        name TEXT,
+                        email TEXT,
+                        username TEXT NOT NULL,
+                        password TEXT NOT NULL)''')
+    # hash password
     conn.commit()
     conn.close()
 
@@ -45,6 +53,10 @@ def add_test():
                   "Almost all types of monkeys live together in groups.",
                   tags_json2, "sz-l", 10, images_json2))
 
+    conn.execute('''INSERT INTO users(name, email, username, password)
+                    VALUES(?, ?, ?, ?)''',
+                 ("Christine Yu", "christine@gmail.com", "cyu", "1234"))
+
     conn.commit()
     conn.close()
 
@@ -52,6 +64,7 @@ def add_test():
 def drop_table():
     conn = get_db_connection()
     conn.execute('''DROP TABLE IF EXISTS products;''')
+    conn.execute('''DROP TABLE IF EXISTS users;''')
     conn.commit()
     conn.close()
 
@@ -99,9 +112,22 @@ def get_products():
     return jsonify(product_list)
 
 
+@app.route('/users_testbank', methods=['GET'])
+def get_users():
+    conn = get_db_connection()
+    users = conn.execute('SELECT * FROM users').fetchall()
+    conn.close()
+
+    user_list = [dict(user) for user in users]
+
+    return jsonify(user_list)
+
+
 drop_table()
 init_db()
 add_test()
+
+# NEED TO FIX FETCH FUNCS THERES TOO MANY
 
 if __name__ == '__main__':
     print("ugh")

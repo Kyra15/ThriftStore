@@ -21,14 +21,14 @@
 
 <div class="login-body wrapper">
     <h1 style="text-align: center; padding-bottom: 0; grid-column-start: 1; grid-column-end: 4;">Admin Page</h1>
-    <form class="login" action="javascript:changePage('inventory')" style="text-align: center; grid-column-start: 1; grid-column-end: 4;">
+    <form class="login" id="loginform" onsubmit="return validateForm()" style="text-align: center; grid-column-start: 1; grid-column-end: 4;">
         <h2>
             <span>Username: </span>
-            <input type="text" id="username">
+            <input type="text" id="username" required>
         </h2>
         <h2>
             <span>Password: </span>
-            <input type="password" id="password">
+            <input type="password" id="password" required>
             <i class="clickable fa fa-eye" id="eye-icon" style="margin-left: 5px;"></i>
         </h2>
         <br>

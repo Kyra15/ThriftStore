@@ -255,3 +255,12 @@ hr.black-border {
     border: 1px solid black;
     transition: all 0.3s;
 }
+
+
+.edit-border {
+    padding: 5px;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+}
