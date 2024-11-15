@@ -1,6 +1,7 @@
 import json
-from flask import Flask, jsonify, render_template, redirect
+from flask import Flask, jsonify, render_template, redirect, request
 import sqlite3
+import bcrypt
 
 app = Flask(__name__)
 
@@ -69,11 +70,11 @@ def drop_table():
     conn.close()
 
 
-def update_table(id, name, price, typeof, desc, tags, size, stock, imgs):
+def update_product(id, name, price, typeof, desc, tags, size, stock, imgs):
     conn = get_db_connection()
     conn.execute('''UPDATE products
-                    SET name = 'Alfred Schmidt', price= 'Frankfurt', type = ''
-                    WHERE id = 1;''')
+                    SET name = ?, price = ?, type = ?, description = ?, tags = ?, size = ?, stock = ?, images = ?
+                    WHERE id = ?;''', (name, price, typeof, desc, tags, size, stock, imgs, id))
     conn.commit()
     conn.close()
 

@@ -99,3 +99,6 @@ function showDivs(n) {
 function editPage(link) {
     window.location.href = link + "?id=" + item_id;
 }
+
+
+window.onload = checkAccess;

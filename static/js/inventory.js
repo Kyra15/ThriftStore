@@ -248,3 +248,5 @@ function createPage() {
     });
 }
 
+
+window.onload = checkAccess;

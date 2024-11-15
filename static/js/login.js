@@ -1,5 +1,3 @@
-let current_user = "";
-
 document.getElementById('eye-icon').addEventListener('click', function() {
     let passwordIn = document.getElementById('password');
     if (passwordIn.type === 'password') {
@@ -12,23 +10,25 @@ document.getElementById('eye-icon').addEventListener('click', function() {
 });
 
 async function validateForm() {
+    event.preventDefault();
+
     let username = document.forms["loginform"]["username"].value;
     let password = document.forms["loginform"]["password"].value;
     console.log(username, password);
 
     const user_data = await fetchFromDB(username);
 
-    if (user_data) {
-        console.log("stuff", user_data.password, password);
-
-        if (user_data.password === password) {
-            console.log("success!");
-            return true;
-        }
+    if (user_data && user_data.password === password) {
+        current_user = user_data;
+        localStorage.setItem('current_user', JSON.stringify(current_user));
+        changePage('inventory');
+        return true;
     } else {
-        console.log("no user");
+        window.alert("Invalid username or password");
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        return false;
     }
-    return false;
 }
 
 
@@ -36,7 +36,7 @@ async function fetchFromDB(username) {
     try {
         const response = await fetch('/users_testbank');
         if (!response.ok) {
-            throw new Error('Network response error: ' + response.statusText);
+            throw new Error('network error: ' + response.statusText);
         }
         const data = await response.json();
 
@@ -44,17 +44,14 @@ async function fetchFromDB(username) {
         const user_data = data.find((user) => user.username == username);
 
         if (user_data) {
-            console.log("user found", user_data);
-            changePage('inventory');
+            console.log("found", user_data);
             return user_data;
         } else {
             window.alert("No user by that name");
-            document.getElementById("username").value = "";
-            document.getElementById("password").value = "";
             return null;
         }
     } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error('error w fetch:', error);
         return null;
     }
 }

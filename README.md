@@ -2,9 +2,8 @@
 
 need to organize files n remove all the prints
 
-## Sprint 3:
+## Sprint 4:
   - CSS + HTML + JS for website
-  - Integrate with Andrey's funcs
 ###  inventory page
 - Features:
   - search w name or id
@@ -38,6 +37,7 @@ need to organize files n remove all the prints
   - login 🤯
   - hide or show password ig
   - sql connected to db
+  - page validation links back to here
 - Things to do:
   - ~~HTML/CSS/JS~~
   - ~~logging in (page connection from this to inventory page)~~
@@ -60,8 +60,10 @@ need to organize files n remove all the prints
     - ~~Issues with priority with filtering, currently does an "or" operation instead of "and" to find intersection~~
     - Spacing and sizing is really weird w the item boxes: when there's only a few items the boxes get super big (not sure if this is a problem tho)
     - Sizing w different viewports is iffy
-    - searches based off of price???? the prob is that its searching the inner html not just the title
+    - searches based off of price???? ik what the problem is tho i js need to fix it
+
 ## FUTURE STUFF:
+  - ~~page validation~~
   - Be able to add more types (like food, clothes, furniture, toy, etc. should b easy to implement, i js dk where you would be able to do it, maybe when adding a new item to stock? you'd be able to create another category for it or edit)
   - Editing stock - changing type, size, details, price, etc.
   - ~~Multiple photos per item~~
@@ -71,5 +73,5 @@ need to organize files n remove all the prints
   - There should be some way of viewing who added stuff n when like pwp log (PCI compliant!!!!!)
   - There should be something in the corner with the current users name
   - Search based off of tags
-  - Create new user or edit user information
-  - email recovery?
+  - Create new user
+  - fast api??????

@@ -122,3 +122,5 @@ function saveChanges() {
             console.error('Error updating data:', error);
         });
 }
+
+window.onload = checkAccess;
