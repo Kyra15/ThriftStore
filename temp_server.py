@@ -1,7 +1,6 @@
 import json
 from flask import Flask, jsonify, render_template, redirect, request
 import sqlite3
-import bcrypt
 
 app = Flask(__name__)
 
