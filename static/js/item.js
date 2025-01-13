@@ -41,6 +41,7 @@ function updateHTML(product) {
     document.getElementById("item-name").textContent = product.name;
     document.getElementById("item-price").textContent = product.price;
     document.getElementById("item-details").textContent = product.description;
+    document.getElementById("item-stock").textContent = product.stock;
 
     let tags = product.tags.replace(/['"\[\]]/g, "").split(", ");
     let images = product.images.replace(/['"\[\]]/g, "").split(", ");
