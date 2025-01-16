@@ -2,6 +2,18 @@ function activateButton(button) {
     button.classList.toggle('active');
 }
 
+// https://stackoverflow.com/questions/71365774/iterate-through-retrieved-buttons-by-class-name-and-click-on-them
+function clearFilters() {
+    const filter_buttons = document.querySelectorAll('.filter-btn');
+    for (let i = 0; i < filter_buttons.length; i++) {
+        button = filter_buttons[i]
+        button.classList.remove('active')
+    }
+    filterSelection("all")
+    filterSize("all")
+    compareLists()
+}
+
 document.getElementById('min-input').addEventListener('blur', function() {
     const value = parseFloat(this.value);
     if (!isNaN(value)) {
